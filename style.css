@@ -69,6 +69,7 @@
   
   /* Hero Content (on image) */
   .hero-content {
+    margin-left:18px;
     background-color: rgba(255, 255, 255, 0.85); /* semi-transparent white box */
     padding: 2rem;
     border-radius: 12px;
