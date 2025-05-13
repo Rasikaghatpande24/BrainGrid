@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BrainGrid - Tic Tac Toe</title>
+  <link rel="stylesheet" href="tictacstyles.css" />
+
+
+</head>
+<body>
+  <div class="wrapper">
+    <h1 class="main-heading">🧠 BrainGrid: Tic Tac Toe</h1>
+
+    <!-- Start Button (shown before game starts) -->
+    <button id="start-btn">Start Game</button>
+
+    <!-- Start Screen (select who starts) -->
+    <div class="start-screen hidden" id="start-screen">
+      <p>Who should start first?</p>
+      <button onclick="startGame('human')">You</button>
+      <button onclick="startGame('computer')">Computer</button>
+    </div>
+
+    <!-- Symbol Choice Modal -->
+    <div id="symbol-modal" class="modal">
+      <div class="modal-content">
+        <p>Choose your symbol:</p>
+        <button onclick="chooseSymbol('X')">X</button>
+        <button onclick="chooseSymbol('O')">O</button>
+      </div>
+    </div>
+
+    <!-- Message display -->
+    <div class="message" id="message"></div>
+
+    <!-- Game board -->
+    <div id="game-board" class="board ">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+
+    <!-- Play Again Button -->
+    <button id="play-again-btn" class="hidden" onclick="resetGame()">Play Again</button>
+
+    <!-- Modal Popup -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <p id="modal-message"></p>
+        <button id="modal-close-btn">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="Javascript/tictac.js"></script>
+</body>
+</html>
